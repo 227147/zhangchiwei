@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 工具志 · 人工智能工具周刊</title>
+  <meta name="description" content="一册在手，纵览人工智能工具——对话、写作、绘画、音视频、编程、办公，尽在 AI 工具志。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ 刊头 ═══ -->
+  <div class="masthead">
+    <div class="mast-rule thick"></div>
+    <div class="mast-inner">
+      <div class="mast-meta left">
+        <span id="mastDate">二〇二六年 · 九月刊</span>
+        <span>第 12 期</span>
+      </div>
+      <h1 class="mast-title">AI 工具志</h1>
+      <div class="mast-meta right">
+        <span>收录 <b id="toolTotal">0</b> 款</span>
+        <button class="daynight" id="dayNight">夜间阅读</button>
+      </div>
+    </div>
+    <div class="mast-slogan">一册在手 · 纵览人工智能之利器</div>
+    <div class="mast-rule"></div>
+  </div>
+
+  <!-- ═══ 检索行 ═══ -->
+  <div class="lookup">
+    <label class="lookup-label">检索</label>
+    <input type="text" id="lookupInput" placeholder="键入工具名、用途或门类……" autocomplete="off" />
+    <span class="lookup-clear" id="lookupClear" hidden>✕</span>
+  </div>
+
+  <!-- ═══ 版面导航 ═══ -->
+  <nav class="sections" id="sections">
+    <a data-sec="all" class="on">卷首<span class="sec-n" id="nAll"></span></a>
+    <i>/</i>
+    <a data-sec="chat">对话<span class="sec-n" id="nchat"></span></a>
+    <i>/</i>
+    <a data-sec="write">文翰<span class="sec-n" id="nwrite"></span></a>
+    <i>/</i>
+    <a data-sec="image">丹青<span class="sec-n" id="nimage"></span></a>
+    <i>/</i>
+    <a data-sec="image-tool">图像<span class="sec-n" id="nimage-tool"></span></a>
+    <i>/</i>
+    <a data-sec="video">影像<span class="sec-n" id="nvideo"></span></a>
+    <i>/</i>
+    <a data-sec="audio">声律<span class="sec-n" id="naudio"></span></a>
+    <i>/</i>
+    <a data-sec="code">码农<span class="sec-n" id="ncode"></span></a>
+    <i>/</i>
+    <a data-sec="office">案牍<span class="sec-n" id="noffice"></span></a>
+    <i>/</i>
+    <a data-sec="search">问津<span class="sec-n" id="nsearch"></span></a>
+    <i>/</i>
+    <a data-sec="fav" id="favLink">藏笥<span class="sec-n" id="nfav">0</span></a>
+  </nav>
+
+  <!-- ═══ 版面 ═══ -->
+  <main class="sheet">
+
+    <!-- 眉题 -->
+    <div class="sheet-head">
+      <h2 id="sheetTitle">卷首 · 全部工具</h2>
+      <div class="order">
+        <span>编排</span>
+        <a data-ord="default" class="on">原序</a><i>·</i>
+        <a data-ord="hot">热度</a><i>·</i>
+        <a data-ord="new">新录</a><i>·</i>
+        <a data-ord="name">名目</a>
+      </div>
+    </div>
+
+    <!-- 条目列表 -->
+    <ol class="entries" id="entries"></ol>
+
+    <!-- 空版 -->
+    <div class="blank" id="blank" hidden>
+      <p class="big">本版暂无条目</p>
+      <p class="dim">或另择门类，或易检索之词</p>
+    </div>
+
+    <!-- 藏笥空 -->
+    <div class="blank" id="favBlank" hidden>
+      <p class="big">藏笥尚虚</p>
+      <p class="dim">条目行末点「◇」即可纳入藏笥</p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
